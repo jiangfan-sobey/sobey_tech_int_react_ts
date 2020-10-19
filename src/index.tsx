@@ -19,6 +19,8 @@ import './styles/public/sobeyTechRoot.less';
 import NotFound from './pages/components/notFound';
 import MainPage from './pages/main/mainPage';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 let antdLocale;
 let lang = navigator.language;
 lang = lang.substr(0, 2);
