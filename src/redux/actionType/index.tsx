@@ -1,0 +1,5 @@
+// 声明常量type
+
+//左侧导航
+export const CHANGE_LEFT_ACTIVE_KEY = 'CHANGE_LEFT_ACTIVE_KEY';
+export const CHANGE_LEFT_OPEN_KEYS = 'CHANGE_LEFT_OPEN_KEYS';
