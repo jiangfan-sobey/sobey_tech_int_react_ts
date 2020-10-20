@@ -1,3 +1,6 @@
+@trans_duration_01: 200ms;
+@color_gray_01: rgba(51, 56, 80, .5);
+@color_gray_02: rgba(51, 56, 80, .15);
 .sobey_tech_int_header {
   background-color: #F5F7FA;
 
@@ -12,7 +15,7 @@
     align-items: center;
 
     .tech_int_nav_logo {
-      height: 50px;
+      height: 3rem;
     }
   }
 
@@ -31,14 +34,16 @@
         border-radius: 1rem;
         padding-right: 3.5rem;
         width: 10rem;
-        transition: width 200ms ease;
-        -moz-transition: width 200ms ease; /* Firefox 4 */
-        -webkit-transition: width 200ms ease; /* Safari 和 Chrome */
-        -o-transition: width 200ms ease; /* Opera */
+        transition: width @trans_duration_01 ease;
+        -moz-transition: width @trans_duration_01 ease; /* Firefox 4 */
+        -webkit-transition: width @trans_duration_01 ease; /* Safari 和 Chrome */
+        -o-transition: width @trans_duration_01 ease; /* Opera */
       }
 
       .tech_int_nav_input:focus {
         width: 15rem;
+        border-color: @color_gray_01;
+        box-shadow: 0 0 0.5rem 0.3rem @color_gray_02;
       }
 
       .input-group-append {
