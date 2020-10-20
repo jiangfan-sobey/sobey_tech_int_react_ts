@@ -1,11 +1,59 @@
-
 .sobey_tech_int_header {
-  height: 50px;
-  line-height: 50px;
-  padding: 0 10px;
-  width: 100%;
-  background-color: pink;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #F5F7FA;
+
+  .form-rounded {
+    border-radius: 1rem;
+  }
+
+  .sobey_tech_int_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tech_int_nav_logo {
+      height: 50px;
+    }
+  }
+
+  .tech_int_nav_list {
+    .navbar-nav .nav-link {
+      color: #5d6778;
+      font-weight: 500;
+    }
+  }
+
+  .tech_int_nav_search {
+    .tech_int_nav_input_group {
+      position: relative;
+
+      .tech_int_nav_input {
+        border-radius: 1rem;
+        padding-right: 3.5rem;
+        width: 10rem;
+        transition: width 200ms ease;
+        -moz-transition: width 200ms ease; /* Firefox 4 */
+        -webkit-transition: width 200ms ease; /* Safari 和 Chrome */
+        -o-transition: width 200ms ease; /* Opera */
+      }
+
+      .tech_int_nav_input:focus {
+        width: 15rem;
+      }
+
+      .input-group-append {
+        position: absolute;
+        height: calc(1.5em + .75rem + 2px);
+        right: 0.3rem;
+        z-index: 3;
+
+        .input-group-text {
+          background-color: transparent;
+          border: none;
+          border-radius: 1rem;
+
+        }
+      }
+    }
+  }
 }
