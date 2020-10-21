@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee35a3cb-0b3a-4447-bc5c-0462c24fe01a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/components/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/header/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/header/header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/public/sobeyTechRoot.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/public/sobeyTechRoot.less" afterDir="false" />
-    </list>
+    <list default="true" id="ee35a3cb-0b3a-4447-bc5c-0462c24fe01a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/components/header/header.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2220">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="354">
+              <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#258#2554#0" />
@@ -125,7 +120,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="2020" />
@@ -216,12 +211,12 @@
       <workItem from="1603092515392" duration="7218000" />
       <workItem from="1603159065453" duration="4819000" />
       <workItem from="1603173522149" duration="501000" />
-      <workItem from="1603174192300" duration="11064000" />
+      <workItem from="1603174192300" duration="11663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23602000" />
+    <option name="totallyTimeSpent" value="24201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -343,8 +338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/components/header/header.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2220">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="354">
+          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#258#2554#0" />
