@@ -47,11 +47,36 @@ class Header extends PureComponent<any, MyState> {
     }
 
     public componentDidMount() {
-        this.user_login();
+        this.set_dropdown_menu_hover();
     }
 
-    private user_login = () => {
-        console.log('user_login');
+    private set_dropdown_menu_hover = () => {
+        const drop_menu_title = document.getElementsByClassName('dropdown_menu_title');
+        console.log('drop_menu_title', drop_menu_title);
+        for (const key in drop_menu_title) {
+            const title_item = drop_menu_title[key];
+            if (title_item && 'object' === typeof title_item && 1 === title_item.nodeType) {
+                console.log(title_item, typeof title_item, title_item.nodeType);
+                title_item.addEventListener('mouseenter', () => {
+                    console.log('mouseenter', title_item.nextElementSibling);
+                    if (title_item.nextElementSibling) {
+                        title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list show';
+                        title_item.nextElementSibling.addEventListener('mouseleave', () => {
+                            if (title_item.nextElementSibling) {
+                                title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list';
+                            }
+                        });
+                    }
+                    /*                    if (title_item.parentNode) {
+                        title_item.parentNode.addEventListener('mouseleave', () => {
+                            if (title_item.nextElementSibling) {
+                                title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list';
+                            }
+                        });
+                    }*/
+                });
+            }
+        }
     };
 
     public render() {
@@ -87,9 +112,9 @@ class Header extends PureComponent<any, MyState> {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a
-                                        className="nav-link dropdown-toggle"
+                                        className="nav-link dropdown-toggle dropdown_menu_title"
                                         href="#"
-                                        id="navbarDropdown"
+                                        id="tech_int_nav_list_pro_solu"
                                         role="button"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
@@ -97,7 +122,7 @@ class Header extends PureComponent<any, MyState> {
                                     >
                                         Products & Solutions
                                     </a>
-                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div className="dropdown-menu dropdown_menu_list" aria-labelledby="navbarDropdown">
                                         <a className="dropdown-item" href="#">
                                             Action
                                         </a>
