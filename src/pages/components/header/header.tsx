@@ -3,7 +3,7 @@ import { PureComponent } from 'react';
 import '../../../styles/components/header/header.less';
 import sobey_int_logo from '../../../assets/header/sobey_int_logo.png';
 
-const Search_icon = (props: any) => {
+const SearchIcon = (props: any) => {
     return (
         <svg
             className="icon"
@@ -34,22 +34,6 @@ const Search_icon = (props: any) => {
     );
 };
 
-const list_icon = (
-    <svg
-        width="1em"
-        height="1em"
-        viewBox="0 0 16 16"
-        className="bi bi-list"
-        fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            fillRule="evenodd"
-            d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-        />
-    </svg>
-);
-
 interface MyState {
     login_name: string | boolean;
 }
@@ -77,7 +61,7 @@ class Header extends PureComponent<any, MyState> {
                     <nav className="navbar navbar-expand-lg navbar-light sobey_tech_int_nav">
                         <img className="navbar-brand tech_int_nav_logo" src={sobey_int_logo} />
                         <button
-                            className="navbar-toggler"
+                            className="navbar-toggler collapsed"
                             type="button"
                             data-toggle="collapse"
                             data-target="#navbarSupportedContent"
@@ -85,7 +69,9 @@ class Header extends PureComponent<any, MyState> {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            {list_icon}
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </button>
                         <div className="collapse navbar-collapse tech_int_nav_list" id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto">
@@ -118,10 +104,11 @@ class Header extends PureComponent<any, MyState> {
                                         <a className="dropdown-item" href="#">
                                             Another action
                                         </a>
-                                        <div className="dropdown-divider"></div>
                                         <a className="dropdown-item" href="#">
                                             Something else here
                                         </a>
+                                        <p className="dropdown_arrow_up"></p>
+                                        <p className="dropdown_arrow_up_border"></p>
                                     </div>
                                 </li>
 
@@ -142,7 +129,7 @@ class Header extends PureComponent<any, MyState> {
                                     />
                                     <div className="input-group-append">
                                         <span className="input-group-text" id="basic-addon2">
-                                            <Search_icon />
+                                            <SearchIcon />
                                         </span>
                                     </div>
                                 </div>
