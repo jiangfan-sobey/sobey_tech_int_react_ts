@@ -2,17 +2,21 @@
 @color_gray_01: rgba(51, 56, 80, .5);
 @color_gray_02: rgba(51, 56, 80, .15);
 @color_gray_03: #5d6778;
+@color_gray_04: rgba(24, 26, 37, 1);
 @color_blue_01: rgba(32, 97, 232, 1);
 @color_blue_02: rgba(240, 242, 255, 1);
 @color_black_01: #16181b;
 .sobey_tech_int_header {
   background-color: #F5F7FA;
 
+
   .sobey_tech_int_nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 5rem;
+    //line-height: 5rem;
 
     .tech_int_nav_logo {
       height: 3rem;
@@ -89,12 +93,14 @@
       font-weight: 500;
     }
 
+    .navbar-nav:hover .nav-link:hover {
+      color: @color_gray_04;
+    }
+
+
     .dropdown-menu {
       box-shadow: 0 0 0.8rem 0.2rem @color_gray_02;
       border: 1px solid @color_gray_02;
-      //position: relative;
-      margin-top: 1rem;
-
 
       .dropdown_arrow_up {
         position: absolute;
@@ -117,13 +123,12 @@
         transform: rotate(45deg);
         z-index: -2;
       }
-    }
 
-
-    .dropdown-item:focus, .dropdown-item:hover {
-      color: @color_black_01;
-      text-decoration: none;
-      background-color: @color_blue_02;
+      .dropdown-item:focus, .dropdown-item:hover {
+        color: @color_black_01;
+        text-decoration: none;
+        background-color: @color_blue_02;
+      }
     }
   }
 

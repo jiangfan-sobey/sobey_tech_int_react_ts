@@ -47,34 +47,54 @@ class Header extends PureComponent<any, MyState> {
     }
 
     public componentDidMount() {
-        this.set_dropdown_menu_hover();
+        this.mouseenter_title_show_dropmenu();
     }
 
-    private set_dropdown_menu_hover = () => {
+    private mouseenter_title_show_dropmenu = () => {
         const drop_menu_title = document.getElementsByClassName('dropdown_menu_title');
-        console.log('drop_menu_title', drop_menu_title);
         for (const key in drop_menu_title) {
             const title_item = drop_menu_title[key];
             if (title_item && 'object' === typeof title_item && 1 === title_item.nodeType) {
-                console.log(title_item, typeof title_item, title_item.nodeType);
+                let hide_menu_flag = false;
                 title_item.addEventListener('mouseenter', () => {
-                    console.log('mouseenter', title_item.nextElementSibling);
-                    if (title_item.nextElementSibling) {
-                        title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list show';
-                        title_item.nextElementSibling.addEventListener('mouseleave', () => {
-                            if (title_item.nextElementSibling) {
-                                title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list';
+                    hide_menu_flag = false;
+                    const menu_ele = title_item.nextElementSibling;
+                    if (menu_ele) {
+                        menu_ele.className = 'dropdown-menu dropdown_menu_list show';
+                        menu_ele.setAttribute('style', 'margin-top:2rem');
+                        setTimeout(() => {
+                            if (menu_ele) {
+                                menu_ele.setAttribute('style', 'transition: margin-top 500ms ease;margin-top:0.8rem');
+                            }
+                        }, 10);
+
+                        menu_ele.addEventListener('mouseenter', () => {
+                            if (menu_ele) {
+                                hide_menu_flag = false;
+                                hide_menu_func();
+                            }
+                        });
+                        menu_ele.addEventListener('mouseleave', () => {
+                            if (menu_ele) {
+                                hide_menu_flag = true;
+                                hide_menu_func();
                             }
                         });
                     }
-                    /*                    if (title_item.parentNode) {
-                        title_item.parentNode.addEventListener('mouseleave', () => {
+                    title_item.addEventListener('mouseleave', () => {
+                        hide_menu_flag = true;
+                        hide_menu_func();
+                    });
+                });
+                const hide_menu_func = () => {
+                    setTimeout(() => {
+                        if (hide_menu_flag) {
                             if (title_item.nextElementSibling) {
                                 title_item.nextElementSibling.className = 'dropdown-menu dropdown_menu_list';
                             }
-                        });
-                    }*/
-                });
+                        }
+                    }, 150);
+                };
             }
         }
     };
@@ -136,11 +156,28 @@ class Header extends PureComponent<any, MyState> {
                                         <p className="dropdown_arrow_up_border"></p>
                                     </div>
                                 </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle dropdown_menu_title"
+                                        href="#"
+                                        id="tech_int_nav_list_pro_solu"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
                                         Future In Cloud
                                     </a>
+                                    <div className="dropdown-menu dropdown_menu_list" aria-labelledby="navbarDropdown">
+                                        <a className="dropdown-item" href="#">
+                                            SAAS
+                                        </a>
+                                        <a className="dropdown-item" href="#">
+                                            LAAS
+                                        </a>
+                                        <p className="dropdown_arrow_up"></p>
+                                        <p className="dropdown_arrow_up_border"></p>
+                                    </div>
                                 </li>
                             </ul>
                             <form className="form-inline my-2 my-lg-0 tech_int_nav_search">

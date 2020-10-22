@@ -17,7 +17,7 @@ import { Provider } from 'react-redux';
 import './styles/public/basicStyleInit.less';
 import './styles/public/sobeyTechRoot.less';
 import NotFound from './pages/components/notFound';
-import MainPage from './pages/main/mainPage';
+import MainPage from './pages/mainPages/mainPage';
 
 let antdLocale;
 let lang = navigator.language;
